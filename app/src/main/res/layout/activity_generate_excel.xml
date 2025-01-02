@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.GenerateExcelActivity">
+
+    <TextView
+        android:id="@+id/lbTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@fonts/roboto_medium"
+        android:gravity="center_horizontal"
+        android:padding="@dimen/activity_margin_5dp"
+        android:layout_marginTop="@dimen/activity_margin_20dp"
+        android:text="@string/billing_summary"
+        android:textSize="@dimen/text_size_18sp"
+        android:textStyle="bold"
+         />
+    <TextView
+        android:id="@+id/dash1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_margin_1dp"
+        android:layout_marginTop="@dimen/activity_margin_10dp"
+        android:background="@color/color_1B1B47"
+        android:layout_below="@+id/lbTitle"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/excelRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_margin_20dp"
+        android:layout_marginBottom="@dimen/activity_margin_20dp"
+        android:layout_below="@+id/dash1"
+        android:layout_above="@+id/excelMsg"
+        />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/excelMsg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_alignParentBottom="true"
+        >
+        <TextView
+            android:id="@+id/dash0"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/activity_margin_1dp"
+            android:background="@color/color_1B1B47"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/lbStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_margin_10dp"
+            android:layout_marginStart="@dimen/activity_margin_10dp"
+            android:fontFamily="@fonts/roboto_regular"
+            android:padding="@dimen/activity_margin_5dp"
+            android:text="@string/excel_status"
+            android:textSize="@dimen/text_size_14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dash0"
+            android:layout_marginBottom="@dimen/activity_margin_20dp"
+            app:layout_constraintBottom_toTopOf="@+id/mGenerateExcel"/>
+
+        <TextView
+            android:id="@+id/mGenerateExcel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_margin_20dp"
+            android:background="@drawable/btn_rounded"
+            android:clickable="true"
+            android:focusable="true"
+            android:minHeight="48dp"
+            android:paddingStart="@dimen/activity_margin_20dp"
+            android:paddingTop="@dimen/activity_margin_10dp"
+            android:paddingEnd="@dimen/activity_margin_20dp"
+            android:paddingBottom="@dimen/activity_margin_10dp"
+            android:text="@string/generate"
+            android:textColor="@color/white"
+            app:drawableRightCompat="@drawable/ic_arrow_circle_down"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/mShare"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="DuplicateSpeakableTextCheck" />
+
+        <TextView
+            android:id="@+id/mShare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_margin_20dp"
+            android:background="@drawable/btn_rounded"
+            android:clickable="true"
+            android:focusable="true"
+            android:minHeight="48dp"
+            android:paddingStart="@dimen/activity_margin_20dp"
+            android:paddingTop="@dimen/activity_margin_10dp"
+            android:paddingEnd="@dimen/activity_margin_20dp"
+            android:paddingBottom="@dimen/activity_margin_10dp"
+            android:text="@string/share"
+            android:textColor="@color/white"
+            app:drawableRightCompat="@drawable/ic_share"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            android:visibility="gone"
+            app:layout_constraintStart_toEndOf="@+id/mGenerateExcel" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</RelativeLayout>

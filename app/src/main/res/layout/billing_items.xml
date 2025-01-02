@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginStart="@dimen/activity_margin_15dp"
+    android:padding="@dimen/activity_margin_5dp"
+    android:layout_marginTop="@dimen/activity_margin_8dp"
+    android:layout_marginEnd="@dimen/activity_margin_15dp"
+    android:layout_marginBottom="@dimen/activity_margin_7dp"
+    android:gravity="center">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/activity_margin_10dp">
+
+        <TextView
+            android:id="@+id/lblBillNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@fonts/roboto_medium"
+            android:padding="@dimen/activity_margin_5dp"
+            android:text="@string/bill_number"
+            android:textSize="@dimen/text_size_14sp"
+            android:textStyle="bold"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtBillNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@fonts/roboto_regular"
+            android:padding="@dimen/activity_margin_5dp"
+            android:textSize="@dimen/text_size_14sp"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lblBillNo" />
+
+        <TextView
+            android:id="@+id/lblBillDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@fonts/roboto_medium"
+            android:padding="@dimen/activity_margin_5dp"
+            android:text="@string/billing_date"
+            android:textSize="@dimen/text_size_14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/lblBillNo"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtBillDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@fonts/roboto_regular"
+            android:padding="@dimen/activity_margin_5dp"
+            android:textSize="@dimen/text_size_14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/lblBillNo"
+            app:layout_constraintTop_toBottomOf="@id/lblBillDate" />
+
+        <TextView
+            android:id="@+id/lblMonth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@fonts/roboto_medium"
+            android:padding="@dimen/activity_margin_5dp"
+            android:text="@string/month_name"
+            android:textSize="@dimen/text_size_14sp"
+            android:textStyle="bold"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtBillNo"
+            />
+
+        <TextView
+            android:id="@+id/txtMonth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@fonts/roboto_regular"
+            android:padding="@dimen/activity_margin_5dp"
+            android:textSize="@dimen/text_size_14sp"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lblMonth" />
+
+        <TextView
+            android:id="@+id/lblYear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@fonts/roboto_medium"
+            android:padding="@dimen/activity_margin_5dp"
+            android:text="@string/billing_year"
+            android:textSize="@dimen/text_size_14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/lblMonth"
+            app:layout_constraintTop_toBottomOf="@+id/txtBillDate" />
+
+        <TextView
+            android:id="@+id/txtYear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@fonts/roboto_regular"
+            android:padding="@dimen/activity_margin_5dp"
+            android:textSize="@dimen/text_size_14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/lblMonth"
+            app:layout_constraintTop_toBottomOf="@id/lblYear" />
+
+        <TextView
+            android:id="@+id/lblStudentName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@fonts/roboto_medium"
+            android:padding="@dimen/activity_margin_5dp"
+            android:text="@string/student_name"
+            android:textSize="@dimen/text_size_14sp"
+            android:textStyle="bold"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtMonth" />
+
+        <TextView
+            android:id="@+id/txtStudentName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@fonts/roboto_regular"
+            android:padding="@dimen/activity_margin_5dp"
+            android:textSize="@dimen/text_size_14sp"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lblStudentName" />
+
+        <TextView
+            android:id="@+id/lblTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@fonts/roboto_medium"
+            android:padding="@dimen/activity_margin_5dp"
+            android:text="@string/total"
+            android:textSize="@dimen/text_size_14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/lblStudentName"
+            app:layout_constraintTop_toBottomOf="@id/txtYear" />
+
+        <TextView
+            android:id="@+id/txtTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@fonts/roboto_regular"
+            android:padding="@dimen/activity_margin_5dp"
+            android:textSize="@dimen/text_size_14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/lblStudentName"
+            app:layout_constraintTop_toBottomOf="@id/lblTotal" />
+
+        <TextView
+            android:id="@+id/lblClassName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@fonts/roboto_medium"
+            android:padding="@dimen/activity_margin_5dp"
+            android:text="@string/class_name"
+            android:textSize="@dimen/text_size_14sp"
+            android:textStyle="bold"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtStudentName" />
+
+        <TextView
+            android:id="@+id/txtClassName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@fonts/roboto_regular"
+            android:padding="@dimen/activity_margin_5dp"
+            android:textSize="@dimen/text_size_14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lblClassName" />
+
+        <TextView
+            android:id="@+id/lblRollno"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@fonts/roboto_medium"
+            android:padding="@dimen/activity_margin_5dp"
+            android:text="@string/roll_no"
+            android:textSize="@dimen/text_size_14sp"
+            android:textStyle="bold"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/lblClassName"
+            app:layout_constraintTop_toBottomOf="@id/txtTotal" />
+
+        <TextView
+            android:id="@+id/txtRollno"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@fonts/roboto_regular"
+            android:padding="@dimen/activity_margin_5dp"
+            android:textSize="@dimen/text_size_14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/lblClassName"
+            app:layout_constraintTop_toBottomOf="@id/lblRollno" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

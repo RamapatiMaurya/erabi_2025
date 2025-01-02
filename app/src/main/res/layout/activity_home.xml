@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.HomeActivity">
+
+
+    <TextView
+        android:id="@+id/lblActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_margin_20dp"
+        android:gravity="center_horizontal"
+        android:text="@string/select_activity"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/imgRegistration"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imgRegistration"
+        android:layout_width="250dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="@dimen/activity_margin_10dp"
+        android:padding="@dimen/activity_margin_10dp"
+        android:background="@drawable/layout_rounded"
+        android:contentDescription="@string/registration"
+        android:src="@drawable/registration"
+        app:layout_constraintBottom_toTopOf="@+id/imgGenerateExcel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblActivity" />
+
+
+    <ImageView
+        android:id="@+id/imgGenerateExcel"
+        android:layout_width="250dp"
+        android:layout_height="200dp"
+        android:background="@drawable/layout_rounded"
+        android:contentDescription="@string/generate_excel"
+        android:src="@drawable/excel"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgRegistration" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

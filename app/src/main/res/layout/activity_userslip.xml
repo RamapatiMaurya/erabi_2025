@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.UserSlipActivity">
+
+    <ScrollView
+        android:id="@+id/reportCard"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/activity_margin_15dp">
+
+            <ImageView
+                android:id="@+id/imgIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_margin_20dp"
+                android:src="@mipmap/ic_launcher"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/lblSchoolName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_margin_20dp"
+                android:gravity="center_horizontal"
+                android:text="@string/heading"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imgIcon" />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/lblStudentName"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/activity_margin_60dp"
+                android:layout_marginTop="@dimen/activity_margin_20dp"
+                android:fontFamily="@fonts/roboto_regular"
+                android:hint="@string/student_name"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/lblSchoolName">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtStudentName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@fonts/roboto_medium"
+                    android:imeOptions="actionNext"
+                    android:inputType="textCapWords"
+                    android:maxLength="50"
+                    android:maxLines="1"
+                    android:textColor="@color/color_1B1B47"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/text_size_14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/lblFatherName"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/activity_margin_60dp"
+                android:layout_marginTop="@dimen/activity_margin_10dp"
+                android:fontFamily="@fonts/roboto_regular"
+                android:hint="@string/father_name"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/lblStudentName">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtFatherName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@fonts/roboto_medium"
+                    android:imeOptions="actionNext"
+                    android:inputType="textCapWords"
+                    android:maxLength="50"
+                    android:maxLines="1"
+                    android:textColor="@color/color_1B1B47"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/text_size_14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/lblClassName"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/activity_margin_60dp"
+                android:layout_marginTop="@dimen/activity_margin_10dp"
+                android:fontFamily="@fonts/roboto_regular"
+                android:hint="@string/class_name"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/lblFatherName">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtClassName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@fonts/roboto_medium"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:maxLines="1"
+                    android:textColor="@color/color_1B1B47"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/text_size_14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/lblRollno"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/activity_margin_60dp"
+                android:layout_marginTop="@dimen/activity_margin_10dp"
+                android:fontFamily="@fonts/roboto_regular"
+                android:hint="@string/roll_no"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/lblClassName">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtRollNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@fonts/roboto_medium"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:maxLength="3"
+                    android:maxLines="1"
+                    android:textColor="@color/color_1B1B47"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/text_size_14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <AutoCompleteTextView
+                android:id="@+id/txtMonth"
+                android:layout_width="@dimen/activity_margin_0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@fonts/roboto_regular"
+                android:hint="@string/select_month"
+                android:layout_marginTop="@dimen/activity_margin_10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/lblRollno"
+                android:textSize="@dimen/text_size_14sp"
+                android:inputType="textCapWords"
+                tools:ignore="LabelFor"
+                android:backgroundTint="@color/purple_500"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.5"
+                android:ems="10"
+                />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineRight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5" />
+
+            <AutoCompleteTextView
+                android:id="@+id/txtYear"
+                android:layout_width="@dimen/activity_margin_0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@fonts/roboto_regular"
+                android:hint="@string/select_year"
+                android:maxLength="4"
+                android:layout_marginTop="@dimen/activity_margin_10dp"
+                android:inputType="textCapWords"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/guidelineRight"
+                app:layout_constraintTop_toBottomOf="@id/lblRollno"
+                android:backgroundTint="@color/purple_500"
+                android:textSize="@dimen/text_size_14sp"
+                tools:ignore="LabelFor" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/lblBillingDate"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/activity_margin_60dp"
+                android:layout_marginTop="@dimen/activity_margin_10dp"
+                android:enabled="false"
+                android:fontFamily="@fonts/roboto_regular"
+                android:hint="@string/billing_date"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtMonth">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtBillingDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:enabled="false"
+                    android:fontFamily="@fonts/roboto_medium"
+                    android:imeOptions="actionNext"
+                    android:inputType="datetime"
+                    android:maxLength="50"
+                    android:maxLines="1"
+                    android:text=""
+                    android:textColor="@color/color_1B1B47"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/text_size_14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/lblTutionFee"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/activity_margin_60dp"
+                android:layout_marginTop="@dimen/activity_margin_10dp"
+                android:fontFamily="@fonts/roboto_regular"
+                android:hint="@string/tution_fees"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/lblBillingDate">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtTutionFee"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@fonts/roboto_medium"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:maxLength="7"
+                    android:maxLines="1"
+                    android:textColor="@color/color_1B1B47"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/text_size_14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/lblVanFee"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/activity_margin_60dp"
+                android:layout_marginTop="@dimen/activity_margin_10dp"
+                android:fontFamily="@fonts/roboto_regular"
+                android:hint="@string/van_fees"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/lblTutionFee">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtVanFee"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@fonts/roboto_medium"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:maxLength="7"
+                    android:maxLines="1"
+                    android:textColor="@color/color_1B1B47"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/text_size_14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/lblExamFee"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/activity_margin_60dp"
+                android:layout_marginTop="@dimen/activity_margin_10dp"
+                android:fontFamily="@fonts/roboto_regular"
+                android:hint="@string/exam_fees"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/lblVanFee">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtExamFee"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@fonts/roboto_medium"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:maxLength="7"
+                    android:maxLines="1"
+                    android:textColor="@color/color_1B1B47"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/text_size_14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/lblOtherFee"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/activity_margin_60dp"
+                android:layout_marginTop="@dimen/activity_margin_10dp"
+                android:fontFamily="@fonts/roboto_regular"
+                android:hint="@string/other_fees"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/lblExamFee">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtOtherFee"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@fonts/roboto_medium"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:maxLength="7"
+                    android:maxLines="1"
+                    android:textColor="@color/color_1B1B47"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/text_size_14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/dash1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/activity_margin_1dp"
+                android:layout_marginTop="@dimen/activity_margin_10dp"
+                android:background="@color/color_1B1B47"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/lblOtherFee" />
+
+            <TextView
+                android:id="@+id/lblTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@fonts/roboto_bold"
+                android:padding="5dp"
+                android:text="@string/total"
+                android:textColor="@color/color_3d3d3d"
+                android:textSize="@dimen/text_size_18sp"
+                android:textStyle="bold"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/dash1" />
+
+            <TextView
+                android:id="@+id/txtTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@fonts/roboto_bold"
+                android:padding="5dp"
+                android:text="0"
+                android:textColor="@color/color_3d3d3d"
+                android:textSize="@dimen/text_size_18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/lblTotal"
+                app:layout_constraintTop_toBottomOf="@id/dash1" />
+
+            <TextView
+                android:id="@+id/dash2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/activity_margin_1dp"
+                android:background="@color/color_1B1B47"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/lblTotal" />
+
+
+            <TextView
+                android:id="@+id/lblCellNo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_margin_10dp"
+                android:fontFamily="@fonts/roboto_medium"
+                android:gravity="center_horizontal"
+                android:padding="@dimen/activity_margin_5dp"
+                android:text="@string/help"
+                android:textSize="@dimen/text_size_14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/dash2" />
+
+
+            <Button
+                android:id="@+id/Scan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_margin_10dp"
+                android:background="@color/purple_500"
+                android:paddingStart="@dimen/activity_margin_10dp"
+                android:paddingEnd="@dimen/activity_margin_10dp"
+                android:text="@string/scan"
+                android:textColor="@color/white"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/mDisc"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/lblCellNo" />
+
+            <Button
+                android:id="@+id/mPrint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_margin_10dp"
+                android:background="@drawable/btn_rounded"
+                android:paddingStart="@dimen/activity_margin_20dp"
+                android:paddingTop="@dimen/activity_margin_10dp"
+                android:paddingEnd="@dimen/activity_margin_20dp"
+                android:paddingBottom="@dimen/activity_margin_10dp"
+                android:text="@string/print"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/mDisc"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/lblCellNo" />
+
+            <Button
+                android:id="@+id/mDisc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_margin_10dp"
+                android:background="@color/purple_500"
+                android:paddingStart="@dimen/activity_margin_10dp"
+                android:paddingEnd="@dimen/activity_margin_10dp"
+                android:text="@string/disable"
+                android:textColor="@color/white"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/mPrint"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/Scan"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/lblCellNo" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/progress_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ProgressBar
+            android:id="@+id/progress_circular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:textDirection="firstStrongLtr" />
+
+        <TextView
+            android:id="@+id/progress_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/loading"
+            android:textAppearance="?android:textAppearanceLarge"
+            />
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

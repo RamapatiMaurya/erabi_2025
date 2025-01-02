@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.SuccessActivity">
+
+    <ScrollView
+        android:id="@+id/reportCard"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/activity_margin_15dp">
+
+            <TextView
+                android:id="@+id/lblBillPreview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_margin_20dp"
+                android:gravity="center_horizontal"
+                android:text="@string/bill_preview"
+                android:padding="@dimen/activity_margin_5dp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_18sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                />
+            
+            <TextView
+                android:id="@+id/lblSchoolName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_margin_40dp"
+                android:gravity="center_horizontal"
+                android:text="@string/heading"
+                android:textColor="@color/black"
+                android:padding="@dimen/activity_margin_5dp"
+                android:textSize="@dimen/text_size_18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/lblBillPreview" />
+
+            <TextView
+                android:id="@+id/dash0"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/activity_margin_1dp"
+                android:layout_marginTop="@dimen/activity_margin_10dp"
+                android:background="@color/color_1B1B47"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/lblSchoolName" />
+
+            <TextView
+                android:id="@+id/lblBillNo"
+                android:layout_width="@dimen/activity_margin_0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@fonts/roboto_medium"
+                android:textStyle="bold"
+                android:layout_marginTop="@dimen/activity_margin_10dp"
+                android:padding="@dimen/activity_margin_5dp"
+                android:text="@string/bill_number"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/dash0"
+                android:textSize="@dimen/text_size_14sp"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.5"
+                />
+
+            <TextView
+                android:id="@+id/txtBillNo"
+                android:layout_width="@dimen/activity_margin_0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_margin_10dp"
+                android:fontFamily="@fonts/roboto_regular"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/guidelineRight"
+                app:layout_constraintTop_toBottomOf="@id/dash0"
+                android:padding="@dimen/activity_margin_5dp"
+                android:textSize="@dimen/text_size_14sp"
+                />
+
+            <TextView
+                android:id="@+id/lblBillingMonth"
+                android:layout_width="@dimen/activity_margin_0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@fonts/roboto_medium"
+                android:textStyle="bold"
+                android:padding="@dimen/activity_margin_5dp"
+                android:text="@string/billing_month"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/lblBillNo"
+                android:textSize="@dimen/text_size_14sp"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.5"
+                />
+
+            <TextView
+                android:id="@+id/txtBillingMonth"
+                android:layout_width="@dimen/activity_margin_0dp"
+                android:padding="@dimen/activity_margin_5dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@fonts/roboto_regular"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/guidelineRight"
+                app:layout_constraintTop_toBottomOf="@id/lblBillNo"
+                android:textSize="@dimen/text_size_14sp"
+                />
+
+
+            <TextView
+                android:id="@+id/lblBillingDate"
+                android:layout_width="@dimen/activity_margin_0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@fonts/roboto_medium"
+                android:textStyle="bold"
+                android:padding="@dimen/activity_margin_5dp"
+                android:text="@string/billing_date"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/lblBillingMonth"
+                android:textSize="@dimen/text_size_14sp"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.5"
+                />
+
+            <TextView
+                android:id="@+id/txtBillingDate"
+                android:layout_width="@dimen/activity_margin_0dp"
+                android:padding="@dimen/activity_margin_5dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@fonts/roboto_regular"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/guidelineRight"
+                app:layout_constraintTop_toBottomOf="@id/lblBillingMonth"
+                android:textSize="@dimen/text_size_14sp"
+                />
+            
+            <TextView
+                android:id="@+id/lblStudentName"
+                android:layout_width="@dimen/activity_margin_0dp"
+                android:padding="@dimen/activity_margin_5dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@fonts/roboto_medium"
+                android:textStyle="bold"
+                android:text="@string/student_name"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/lblBillingDate"
+                android:textSize="@dimen/text_size_14sp"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.5"
+                />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineRight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5" />
+
+            <TextView
+                android:id="@+id/txtStudentName"
+                android:layout_width="@dimen/activity_margin_0dp"
+                android:padding="@dimen/activity_margin_5dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@fonts/roboto_regular"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/guidelineRight"
+                app:layout_constraintTop_toBottomOf="@id/lblBillingDate"
+                android:textSize="@dimen/text_size_14sp"
+                />
+
+            <TextView
+                android:id="@+id/lblFatherName"
+                android:layout_width="@dimen/activity_margin_0dp"
+                android:padding="@dimen/activity_margin_5dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@fonts/roboto_medium"
+                android:textStyle="bold"
+                android:text="@string/father_name"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/lblStudentName"
+                android:textSize="@dimen/text_size_14sp"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.5"
+                />
+            
+            <TextView
+                android:id="@+id/txtFatherName"
+                android:layout_width="@dimen/activity_margin_0dp"
+                android:padding="@dimen/activity_margin_5dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@fonts/roboto_regular"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/guidelineRight"
+                app:layout_constraintTop_toBottomOf="@id/lblStudentName"
+                android:textSize="@dimen/text_size_14sp"
+                />
+
+            <TextView
+                android:id="@+id/lblClassName"
+                android:layout_width="@dimen/activity_margin_0dp"
+                android:padding="@dimen/activity_margin_5dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@fonts/roboto_medium"
+                android:textStyle="bold"
+                android:text="@string/class_name"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/lblFatherName"
+                android:textSize="@dimen/text_size_14sp"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.5"
+                />
+
+            <TextView
+                android:id="@+id/txtClassName"
+                android:layout_width="@dimen/activity_margin_0dp"
+                android:padding="@dimen/activity_margin_5dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@fonts/roboto_regular"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/guidelineRight"
+                app:layout_constraintTop_toBottomOf="@id/lblFatherName"
+                android:textSize="@dimen/text_size_14sp"
+                />
+
+            <TextView
+                android:id="@+id/lblRollno"
+                android:layout_width="@dimen/activity_margin_0dp"
+                android:padding="@dimen/activity_margin_5dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@fonts/roboto_medium"
+                android:textStyle="bold"
+                android:text="@string/roll_no"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/lblClassName"
+                android:textSize="@dimen/text_size_14sp"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.5"
+                />
+
+            <TextView
+                android:id="@+id/txtRollno"
+                android:layout_width="@dimen/activity_margin_0dp"
+                android:padding="@dimen/activity_margin_5dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@fonts/roboto_regular"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/guidelineRight"
+                app:layout_constraintTop_toBottomOf="@id/lblClassName"
+                android:textSize="@dimen/text_size_14sp"
+                />
+
+            <TextView
+                android:id="@+id/dash3"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/activity_margin_1dp"
+                android:layout_marginTop="@dimen/activity_margin_10dp"
+                android:background="@color/color_1B1B47"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/lblRollno" />
+
+            <TextView
+                android:id="@+id/lblTutionFee"
+                android:layout_width="@dimen/activity_margin_0dp"
+                android:padding="@dimen/activity_margin_5dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@fonts/roboto_medium"
+                android:layout_marginTop="@dimen/activity_margin_10dp"
+                android:textStyle="bold"
+                android:text="@string/tution_fees"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/dash3"
+                android:textSize="@dimen/text_size_14sp"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.5"
+                />
+
+            <TextView
+                android:id="@+id/txtTutionFee"
+                android:layout_width="@dimen/activity_margin_0dp"
+                android:padding="@dimen/activity_margin_5dp"
+                android:layout_marginTop="@dimen/activity_margin_10dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@fonts/roboto_regular"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/guidelineRight"
+                app:layout_constraintTop_toBottomOf="@id/dash3"
+                android:textSize="@dimen/text_size_14sp"
+                />
+
+            <TextView
+                android:id="@+id/lblVanFee"
+                android:layout_width="@dimen/activity_margin_0dp"
+                android:padding="@dimen/activity_margin_5dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@fonts/roboto_medium"
+                android:textStyle="bold"
+                android:text="@string/van_fees"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/lblTutionFee"
+                android:textSize="@dimen/text_size_14sp"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.5"
+                />
+
+            <TextView
+                android:id="@+id/txtVanFee"
+                android:layout_width="@dimen/activity_margin_0dp"
+                android:padding="@dimen/activity_margin_5dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@fonts/roboto_regular"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/guidelineRight"
+                app:layout_constraintTop_toBottomOf="@id/lblTutionFee"
+                android:textSize="@dimen/text_size_14sp"
+                />
+
+            <TextView
+                android:id="@+id/lblExamFee"
+                android:layout_width="@dimen/activity_margin_0dp"
+                android:padding="@dimen/activity_margin_5dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@fonts/roboto_medium"
+                android:textStyle="bold"
+                android:text="@string/exam_fees"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/lblVanFee"
+                android:textSize="@dimen/text_size_14sp"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.5"
+                />
+
+            <TextView
+                android:id="@+id/txtExamFee"
+                android:layout_width="@dimen/activity_margin_0dp"
+                android:padding="@dimen/activity_margin_5dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@fonts/roboto_regular"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/guidelineRight"
+                app:layout_constraintTop_toBottomOf="@id/lblVanFee"
+                android:textSize="@dimen/text_size_14sp"
+                />
+
+            <TextView
+                android:id="@+id/lblOtherFee"
+                android:layout_width="@dimen/activity_margin_0dp"
+                android:padding="@dimen/activity_margin_5dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@fonts/roboto_medium"
+                android:textStyle="bold"
+                android:text="@string/other_fees"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/lblExamFee"
+                android:textSize="@dimen/text_size_14sp"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.5"
+                />
+
+            <TextView
+                android:id="@+id/txtOtherFee"
+                android:layout_width="@dimen/activity_margin_0dp"
+                android:padding="@dimen/activity_margin_5dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@fonts/roboto_regular"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/guidelineRight"
+                app:layout_constraintTop_toBottomOf="@id/lblExamFee"
+                android:textSize="@dimen/text_size_14sp"
+                />
+
+            
+            <TextView
+                android:id="@+id/dash1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/activity_margin_1dp"
+                android:layout_marginTop="@dimen/activity_margin_10dp"
+                android:background="@color/color_1B1B47"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/lblOtherFee" />
+
+            <TextView
+                android:id="@+id/lblTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/activity_margin_5dp"
+                android:fontFamily="@fonts/roboto_bold"
+                android:text="@string/total"
+                android:textColor="@color/color_3d3d3d"
+                android:textSize="@dimen/text_size_18sp"
+                android:textStyle="bold"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/dash1" />
+
+            <TextView
+                android:id="@+id/txtTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@fonts/roboto_bold"
+                android:padding="@dimen/activity_margin_5dp"
+                android:text="0"
+                android:textColor="@color/color_3d3d3d"
+                android:textSize="@dimen/text_size_18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/lblTotal"
+                app:layout_constraintTop_toBottomOf="@id/dash1" />
+
+            <TextView
+                android:id="@+id/dash2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/activity_margin_1dp"
+                android:background="@color/color_1B1B47"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/lblTotal" />
+
+            <TextView
+                android:id="@+id/lblCellNo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_margin_10dp"
+                android:fontFamily="@fonts/roboto_medium"
+                android:gravity="center_horizontal"
+                android:padding="@dimen/activity_margin_5dp"
+                android:text="@string/help"
+                android:textSize="@dimen/text_size_14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/dash2" />
+
+            <Button
+                android:id="@+id/mBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_margin_20dp"
+                android:background="@drawable/btn_rounded"
+                android:paddingStart="@dimen/activity_margin_20dp"
+                android:paddingTop="@dimen/activity_margin_10dp"
+                android:paddingEnd="@dimen/activity_margin_20dp"
+                android:paddingBottom="@dimen/activity_margin_10dp"
+                android:text="@string/back"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/lblCellNo" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,4 +1,4 @@
-package com.misri.myapplication
+package com.school.erabi
 
 import org.junit.Test
 
